@@ -20,10 +20,8 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '14'
-      - name: Fetch TypeScript
-        run: 'npm install --save-dev typescript'
       - name: Fetch all node_modules
-        run: 'npm install --save-dev'
+        run: 'npm install --save-dev typescript'
       - name: Run webpack build
         run: 'npm run build'
       - name: Deploy to Azure
