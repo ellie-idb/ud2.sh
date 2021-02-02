@@ -19,7 +19,9 @@ jobs:
       - name: Setup node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '12'
+          node-version: '14'
+      - name: Fetch TypeScript
+        run: 'npm install --save-dev typescript'
       - name: Fetch all node_modules
         run: 'npm install --save-dev'
       - name: Run webpack build
