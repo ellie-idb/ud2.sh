@@ -1,4 +1,6 @@
 # 0xcc.pw
+<img src="https://github.com/hatf0/0xcc.pw/blob/master/favicon.svg?raw=true" width="100">
+
 This repo hosts the source code for [0xcc.pw](https://0xcc.pw).
 
 Please note: I have no clue where the typist library came from. 
