@@ -6,20 +6,35 @@ const key = "f00bar";
 
 var commands = {
     "whoami": function(args) {
+        window.typist.print('I don\'t know - who ARE you?');
+    },
+    "about": function(args) {
+        window.typist.
+            print('Hello! You have reached hatf0\'s about page.').
+            sleep(100).
+            print('I am proficient in C++ / JavaScript / DLang / x86 assembly, and have years of experience under my belt.').
+            sleep(100).
+            print('I am a high school senior (about to graduate), and I\'m always looking for new job opportunities').
+            sleep(100).
+            print('Let me know if you have a position you\'d like to see me fill!').
+            sleep(100).
+            after(contact).
+            sleep(100).
+            print('Thanks! :)');
+    },
+    "resume": function(args) {
+        var a = document.createElement("a");
+        a.href = "assets/resume.pdf";
+        a.click();
+    },
+    "contact": function(args) {
         /* xor encoding for some address */
         var decrypted = "";
         for (var i = 0; i < obfus.length; i++) {
             var o = obfus.charCodeAt(i) ^ key.charCodeAt(i % key.length);
             decrypted += String.fromCharCode(o);
         }
-
         window.typist.
-            print('Hello! You have reached hatf0\'s about page.').
-            sleep(100).
-            print('I am proficient in C++ / JavaScript / DLang / x86 assembly, and have years of experience under my belt.').
-            sleep(100).
-            print('This website does not contain a full listing of everything I have done - please contact me for examples.').
-            sleep(100).
             print('My contact info is as follows:').
             sleep(100).
             print('GitHub: <a href="https://github.com/hatf0">@hatf0</a>').
@@ -32,11 +47,7 @@ var commands = {
             sleep(100).
             print(decrypted).
             sleep(100).
-            print('PGP: <a href="public.asc">public.asc</a>').
-            sleep(100).
-            print('Website:.... you\'re on it.').
-            sleep(100).
-            print('Thanks! :)');
+            print('PGP: <a href="public.asc">public.asc</a>');
     },
     "boot": function(args) {
         if (window.mobileDetected) {
@@ -65,7 +76,7 @@ var commands = {
             sleep(1000).
             clear().
             after(function() {
-                window.location.href = "blog";
+                window.location = "https://b.0xcc.pw";
             });
     },
     "help": function(args) {
