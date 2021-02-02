@@ -22,6 +22,7 @@ var commands = {
     },
     "resume": function(args) {
         var a = document.createElement("a");
+        a.download = "resume.pdf";
         a.href = "assets/resume.pdf";
         a.click();
     },
