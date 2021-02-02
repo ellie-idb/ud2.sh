@@ -1,5 +1,5 @@
 # 0xcc.pw
-<img src="https://github.com/hatf0/0xcc.pw/blob/master/favicon.svg?raw=true" width="100">
+<img src="https://0xcc.pw/assets/favicon.svg" width="100">
 
 This repo hosts the source code for [0xcc.pw](https://0xcc.pw).
 
