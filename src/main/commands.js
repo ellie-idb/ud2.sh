@@ -18,7 +18,7 @@ var commands = {
             print('Proficient in C++ / JavaScript / DLang / x86 assembly, I have years of experience under my belt.').
             sleep(100).
             print('Let me know if you have a position you\'d like to see me fill!').
-            sleep(100).
+            sleep(100);
     },
     "resume": function(args) {
         var a = document.createElement("a");
