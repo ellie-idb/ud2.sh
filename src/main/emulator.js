@@ -30,3 +30,5 @@ function runEmulator() {
     v86.src = "vm/libv86.js";
     document.head.appendChild(v86);
 }
+
+export {runEmulator};

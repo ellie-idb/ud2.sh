@@ -1,5 +1,5 @@
 import '../shared/typist.ts';
-import './boot.js';
+import {runEmulator} from './emulator.js';
 
 const obfus = "\x23\x5d\x51\x0b\x0d\x48\x46\x0c\x51\x42\x09\x00\x03\x56\x0d\x40\x0c\x13\x0f\x5c\x44\x0d\x5b\x1a\x07\x42\x42\x0b\x12\x1d\x08\x70\x00\x1a\x02\x11\x48\x40\x47\x40\x5f\x1a\x07\x42\x42\x0b\x12\x1d\x08\x70\x00\x1a\x02\x11\x48\x40\x47\x5e\x4e\x13\x58";
 const key = "f00bar";
@@ -12,7 +12,7 @@ var commands = {
             var o = obfus.charCodeAt(i) ^ key.charCodeAt(i % key.length);
             decrypted += String.fromCharCode(o);
         }
-        
+
         window.typist.
             print('Hello! You have reached hatf0\'s about page.').
             sleep(100).
