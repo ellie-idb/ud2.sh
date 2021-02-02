@@ -18,7 +18,7 @@ var commands = {
             sleep(100).
             print('Let me know if you have a position you\'d like to see me fill!').
             sleep(100).
-            after(contact).
+            after(commands["contact"]).
             sleep(100).
             print('Thanks! :)');
     },
