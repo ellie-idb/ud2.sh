@@ -98,7 +98,6 @@ $(function() {
 
     window.prebootDone = false;
     window.enableTyping = false;
-    window.hostname = "(pxe) ";
     window.termCache = ""; //what's currently in the buffer
     window.termLast = ""; //the last command that was executed
 
@@ -119,7 +118,9 @@ $(function() {
             window.termLast = window.termCache;
             window.termCache = "";
             window.typist.type('\n');
-            window.typist.prompt();
+            if (window.enableTyping) {
+                window.typist.prompt();
+            }
             playKeySound();
         } else if (event.which !== 9) {
             var str = String.fromCharCode(event.which);

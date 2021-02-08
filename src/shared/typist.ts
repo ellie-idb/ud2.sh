@@ -80,7 +80,7 @@ class Typist {
         }
     }
 
-    private addLine(): JQuery {
+    addLine(): JQuery {
         if (this.cursor) {
             this.cursor.remove();
         }

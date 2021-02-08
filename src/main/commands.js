@@ -56,17 +56,12 @@ var commands = {
             return;   
         }
         
-        document.getElementById('bootSound').play();
         window.enableTyping = false;
         window.typist.
-            print('Goodbye! Booting up Linux....').
-            sleep(3000).
-            clear().
+            print('Loading emulator....').
+            sleep(1500).
             after(function() {
-                window.prebootDone = true;
-                $(".container").hide();
-                $('#screen_container').show();
-                setTimeout(() => runEmulator(), 1000);
+                runEmulator();
             });
     },
     "blog": function(args) {
