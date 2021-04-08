@@ -7,12 +7,11 @@ function playKeySound() {
     document.getElementById('keySound' + (Math.floor(Math.random() * 5) + 1)).play();
 }
 
-function showKeyboard() {
-    if (!window.mobileDetected) return;
-    document.getElementById("dummyText").focus();
-}
-
 $(function() {
+    window.showKeyboard = function() {
+	if (!window.mobileDetected) return;
+	document.getElementById("dummyText").focus();
+    };
     var windowSize = $(window).height() - 200;
     $(window).on('resize', function() {
         if (window.prebootDone) return;
