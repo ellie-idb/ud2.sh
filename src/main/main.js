@@ -9,9 +9,10 @@ function playKeySound() {
 
 $(function() {
     window.showKeyboard = function() {
-	if (!window.mobileDetected) return;
-	document.getElementById("dummyText").focus();
+        if (!window.mobileDetected) return;
+        document.getElementById("dummyText").focus();
     };
+
     var windowSize = $(window).height() - 200;
     $(window).on('resize', function() {
         if (window.prebootDone) return;
