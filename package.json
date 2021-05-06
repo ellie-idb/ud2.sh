@@ -11,7 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "@types/html-webpack-plugin": "^3.2.4",
-    "jquery": "^3.5.1"
+    "jquery": "^3.5.1",
+    "typescript": "^4.2.4"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",

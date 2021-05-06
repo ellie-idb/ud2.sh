@@ -1,5 +1,5 @@
 import '../shared/typist.ts';
-import {runEmulator} from './emulator.js';
+import {runEmulator, listEmulators, isValidEmulator} from './emulator.js';
 
 const obfus = "\x23\x5d\x51\x0b\x0d\x48\x46\x0c\x51\x42\x09\x00\x03\x56\x0d\x40\x0c\x13\x0f\x5c\x44\x0d\x5b\x1a\x07\x42\x42\x0b\x12\x1d\x08\x70\x00\x1a\x02\x11\x48\x40\x47\x40\x5f\x1a\x07\x42\x42\x0b\x12\x1d\x08\x70\x00\x1a\x02\x11\x48\x40\x47\x5e\x4e\x13\x58";
 const key = "f00bar";
@@ -55,13 +55,20 @@ var commands = {
                 sleep(500);
             return;   
         }
+
+        if (args.length != 1 || !isValidEmulator(args[0])) {
+            window.typist
+                   .print('Please specify a valid emulator to boot. Valid emulators are: ' + listEmulators())
+                   .sleep(100);
+            return;
+        }
         
         window.enableTyping = false;
         window.typist.
             print('Loading emulator....').
             sleep(1500).
             after(function() {
-                runEmulator();
+                runEmulator(args[0]);
             });
     },
     "blog": function(args) {
