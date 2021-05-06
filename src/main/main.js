@@ -154,7 +154,7 @@ $(function() {
                         if (prop.substring(0, cache.length).toLowerCase() == cache.toLowerCase()) {
                             window.termCache = prop;
                             var prompt = $('.prompt').last();
-                            prompt.html(window.hostname + '$ ' + prop);
+                            prompt.html(window.typist.options.hostname + '$ ' + prop);
                             prompt.append(window.typist.addCursor());
                             playKeySound();
                             break;
@@ -184,7 +184,7 @@ $(function() {
             if (window.termLast !== "") {
                 window.termCache = window.termLast;
                 var prompt = $('.prompt').last();
-                prompt.html(window.hostname + '$ ' + window.termLast);
+                prompt.html(window.typist.options.hostname + '$ ' + window.termLast);
                 prompt.append(window.typist.addCursor());
                 playKeySound();
             }
