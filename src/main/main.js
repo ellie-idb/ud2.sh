@@ -29,7 +29,7 @@ $(function() {
         return this.clone().find(sel || ">*").remove().end();
     };
 
-    let opts = new TypistOptions("(pxe) ", "#000", "#ffffff", undefined, windowSize, 80);
+    let opts = new TypistOptions("root@ud2.sh ", "#000", "#ffffff", undefined, windowSize, 80);
     window.typist = new Typist($('#terminal'), opts);
 
     function typebios() {
