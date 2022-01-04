@@ -11,14 +11,7 @@ var commands = {
     "about": function(args) {
         // apparently i have to sell myself /shrug
         window.typist.
-            print('Hello! You have reached my (hatf0) about page.').
-            sleep(100).
-            print('I am a high school senior (about to graduate), and I\'m always looking for new job opportunities').
-            sleep(100).
-            print('Proficient in C++ / JavaScript / DLang / x86 assembly, I have years of experience under my belt.').
-            sleep(100).
-            print('Let me know if you have a position you\'d like to see me fill!').
-            sleep(100);
+            print('Hello! You have reached my (hatf0) about page.');
     },
     "resume": function(args) {
         var a = document.createElement("a");
@@ -69,15 +62,6 @@ var commands = {
             sleep(1500).
             after(function() {
                 runEmulator(args[0]);
-            });
-    },
-    "blog": function(args) {
-        window.typist.
-            print('Redirecting you to my blog. Goodbye!').
-            sleep(1000).
-            clear().
-            after(function() {
-                window.location = "https://b.0xcc.pw";
             });
     },
     "help": function(args) {

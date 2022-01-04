@@ -82,8 +82,8 @@ $(function() {
             print('\n').
         speed(TypistSpeed.FAST).
             print('Last login: Mon Feb  1 16:49:57 on ttys007').
-            print('Welcome to pre-execution environment on 0xcc.pw. Type \'help\' for a listing of commands.').
-            print('Fun Fact: Typing \'boot\' will allow you to launch a virtual machine. Please note: it is heavily resource-intensive.').
+            print('Welcome to the pre-execution environment on ud2.sh. Type \'help\' for a listing of commands.').
+            print('By typing \'boot\', you will launch a buildroot Linux VM. Please note: it is somewhat resource intensive. ').
         prompt(function() {
           window.enableTyping = true;
         });
