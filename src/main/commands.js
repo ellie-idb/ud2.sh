@@ -6,18 +6,14 @@ const key = "f00bar";
 
 var commands = {
     "whoami": function(args) {
-        window.typist.print('I don\'t know - who ARE you?');
-    },
-    "about": function(args) {
-        // apparently i have to sell myself /shrug
         window.typist.
-            print('Hello! You have reached my (hatf0) about page.');
+            print('website-user');
     },
-    "resume": function(args) {
-        var a = document.createElement("a");
-        a.download = "resume.pdf";
-        a.href = "assets/resume.pdf";
-        a.click();
+    "about": () => {
+        window.typist
+              .print("Welcome to my personal website! My name is Harrison Ford (@hatf0).")
+              .print("I'm a 19 year old software engineer, and I'm currently in college pursuing a degree in computer science.")
+              .print("You can find my contact information by running the 'contact' command.")
     },
     "contact": function(args) {
         /* xor encoding for some address */
@@ -27,8 +23,6 @@ var commands = {
             decrypted += String.fromCharCode(o);
         }
         window.typist.
-            print('My contact info is as follows:').
-            sleep(100).
             print('GitHub: <a href="https://github.com/hatf0">@hatf0</a>').
             sleep(100).
             print('Telegram: <a href="https://t.me/hatf0">@hatf0</a>').
@@ -37,9 +31,7 @@ var commands = {
             sleep(100).
             print('LinkedIn: <a href="https://www.linkedin.com/in/hatf0/">Harrison Ford</a>').
             sleep(100).
-            print(decrypted).
-            sleep(100).
-            print('PGP: <a href="public.asc">public.asc</a>');
+            print(decrypted);
     },
     "boot": function(args) {
         if (window.mobileDetected) {
@@ -54,6 +46,11 @@ var commands = {
                    .print('Please specify a valid emulator to boot. Valid emulators are: ' + listEmulators())
                    .sleep(100);
             return;
+        }
+
+        if (args[0] === "doom") {
+            window.typist
+                  .print("Note: after the VM has finished booting, type in 'startx' to start Doom.");
         }
         
         window.enableTyping = false;

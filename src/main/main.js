@@ -29,7 +29,7 @@ $(function() {
         return this.clone().find(sel || ">*").remove().end();
     };
 
-    let opts = new TypistOptions("root@ud2.sh ", "#000", "#ffffff", undefined, windowSize, 80);
+    let opts = new TypistOptions("website-user@ud2.sh", "#000", "#ffffff", undefined, windowSize, 80);
     window.typist = new Typist($('#terminal'), opts);
 
     function typebios() {
@@ -40,12 +40,12 @@ $(function() {
                 print('╔═══════════════════════════════════════════════════════════════════════════╗').
                 print('║   AMIBIOS System Configuration (C) 1985-2018, American Megatrends Inc.,   ║').
                 print('╠══════════════════════════════════════╤════════════════════════════════════╣').
-                print('║ Main Processor   : Some Stupid CPU   │ Base Memory Size : 640KB           ║').
+                print('║ Main Processor   : Pentium III       │ Base Memory Size : 640KB           ║').
                 print('║ Math Processor   : Built-In          │ Ext. Memory Size : 64512KB         ║').
                 print('║ Floppy Drive A:  : 1.44 MB 3½        │ Display Type     : VGA/EGA         ║').
                 print('║ Floppy Drive B:  : None              │ Serial Port(s)   : 3F8, 3E8        ║').
                 print('║ AMIBIOS Date     : 04/06/18          │ Parallel Port(s) : 378             ║').
-                print('║ Processor Clock  : 233MHz            │ External Cache   : 256KB, Enabled  ║').
+                print('║ Processor Clock  : 667MHz            │ External Cache   : 256KB, Enabled  ║').
                 print('╟──────────────────────────────────────┴────────────────────────────────────╢').
                 print('║ Hard Disk(s)       Cyl   Head Sector Size      LBA    32Bit  Block   PIO  ║').
                 print('║                                                Mode   Mode   Mode    Mode ║').
@@ -59,9 +59,8 @@ $(function() {
                 print('╚═══════════════════════════════════════════════════════════════════════════╝').
                 print(' ').
                 sleep(3500).
-                print('Starting pre-boot environment...').
-                sleep(500).
-            after(typegrub);
+                clear().
+                after(typegrub);
     }
 
     function typegrub() {
